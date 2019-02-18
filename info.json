@@ -1,0 +1,11 @@
+{
+  "name": "Manifold",
+  "version": "0.0.1",
+  "title": "Manifold",
+  "author": "wakjah",
+  "contact": "",
+  "homepage": "https://TODO",
+  "description": "Adds a 1x1 storage tank with 4 connections.",
+  "factorio_version": "0.16",
+	"dependencies": ["base >= 0.16.51"]	
+}
