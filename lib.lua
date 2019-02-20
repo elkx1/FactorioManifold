@@ -1,4 +1,6 @@
-function copyPrototype(type, name, newName)
+local M = {}
+
+M.copyPrototype = function(type, name, newName)
   if not data.raw[type][name] then error("type "..type.." "..name.." doesn't exist") end
   local p = table.deepcopy(data.raw[type][name])
   p.name = newName
@@ -21,4 +23,8 @@ function copyPrototype(type, name, newName)
   return p
 end
 
-return copyPrototype
+M.isBobsPumpAvailable = function()
+	return data.raw["pump"]["bob-pump-4"] ~= nil
+end
+
+return M

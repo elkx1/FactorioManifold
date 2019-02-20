@@ -2,14 +2,22 @@ data:extend({
   {
     type = "technology",
     name = "manifold",
-    icon = "__base__/graphics/icons/storage-tank.png",
+    icon = "__base__/graphics/icons/pump.png",
     icon_size = 32,
     prerequisites = {"fluid-handling"},
     effects =
     {
-      {
+	  {
         type = "unlock-recipe",
-        recipe = "manifold"
+        recipe = "intake-manifold"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "outlet-manifold"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "intake-manifold-from-outlet"
       }
     },
     unit =

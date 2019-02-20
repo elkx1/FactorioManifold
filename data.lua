@@ -1,4 +1,4 @@
-require ("lib")
+lib = require("lib")
 
 require("prototypes.technology")
 require("prototypes.recipe")
