@@ -7,5 +7,5 @@
   "homepage": "https://mods.factorio.com/mod/manifold-pumps",
   "description": "Adds pumps with multiple inputs and outputs.",
   "factorio_version": "0.17",
-  "dependencies": ["base >= 0.17.0", "? boblogistics >= 0.16.23"]	
+  "dependencies": ["base >= 0.17.0", "? boblogistics >= 0.17.1"]	
 }
