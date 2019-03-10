@@ -18,7 +18,7 @@ local intakeManifold = makeManifold("manifold-pump-intake")
 intakeManifold.fluid_box =
     {
       base_area = 1,
-      height = 2,
+      height = 10,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
@@ -36,7 +36,7 @@ local outletManifold = makeManifold("manifold-pump-outlet")
 outletManifold.fluid_box =
     {
       base_area = 1,
-      height = 2,
+      height = 10,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
