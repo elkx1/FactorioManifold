@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item",
     name = "manifold-pump-intake",
-    icon = "__base__/graphics/icons/pump.png",
+    icon = "__manifold-pumps__/graphics/icons/manifold-pump-intake.png",
     icon_size = 32,
     subgroup = "energy-pipe-distribution",
     order = "b[fluid]-b[manifold-pump-intake]",
@@ -13,7 +13,7 @@ data:extend({
   {
     type = "item",
     name = "manifold-pump-outlet",
-    icon = "__base__/graphics/icons/pump.png",
+    icon = "__manifold-pumps__/graphics/icons/manifold-pump-outlet.png",
     icon_size = 32,
     subgroup = "energy-pipe-distribution",
     order = "b[fluid]-b[manifold-pump-outlet]",

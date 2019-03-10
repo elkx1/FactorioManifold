@@ -22,7 +22,7 @@ if git diff-index --quiet HEAD --; then
 else
 	# There are working dir changes
 	# Create a stash so that we get local changes in the working dir
-	stash_name=$(git stash create)
+	stash_name=$(git stash create --all)
 	git stash store $stash_name # Store it so we can later call drop on it
 	archive $stash_name
 	# Cleanup; really we should put this in an exit hook or something in case the above errors
