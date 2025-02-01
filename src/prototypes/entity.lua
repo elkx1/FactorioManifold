@@ -9,7 +9,7 @@ end
 
 local function makeManifold(name)
 	local entity = copyPump(name)
-	entity.energy_usage = "60kW"
+	entity.energy_usage = "145kW"
     entity.pumping_speed = 250
 	return entity
 end
@@ -18,16 +18,16 @@ local intakeManifold = makeManifold("manifold-pump-intake")
 intakeManifold.fluid_box =
     {
       base_area = 1,
-      height = 10,
+      volume = 400,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
-        { position = {0, -1.5}, type="output" },
-        { position = {0, 1.5}, type="input" },
-		{ position = {1.0, 0.5}, type="input" },
-		{ position = {1.0, -0.5}, type="input" },
-		{ position = {-1.0, 0.5}, type="input" },
-		{ position = {-1.0, -0.5}, type="input" }
+        { direction = defines.direction.north, position = {0, -0.5}, flow_direction = "output" },
+        { direction = defines.direction.west, position = {0, -0.5}, flow_direction = "input" },
+        { direction = defines.direction.west, position = {0, 0.5}, flow_direction = "input" },
+        { direction = defines.direction.east, position = {0, -0.5}, flow_direction = "input" },
+        { direction = defines.direction.east, position = {0, 0.5}, flow_direction = "input" },
+        { direction = defines.direction.south, position = {0, 0.5}, flow_direction = "input" },
       },
     }
 
@@ -36,16 +36,16 @@ local outletManifold = makeManifold("manifold-pump-outlet")
 outletManifold.fluid_box =
     {
       base_area = 1,
-      height = 10,
+      volume = 400,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
-        { position = {0, -1.5}, type="output" },
-        { position = {0, 1.5}, type="input" },
-		{ position = {1.0, 0.5}, type="output" },
-		{ position = {1.0, -0.5}, type="output" },
-		{ position = {-1.0, 0.5}, type="output" },
-		{ position = {-1.0, -0.5}, type="output" }
+        { direction = defines.direction.north, position = {0, -0.5}, flow_direction = "output" },
+        { direction = defines.direction.west, position = {0, -0.5}, flow_direction = "output" },
+        { direction = defines.direction.west, position = {0, 0.5}, flow_direction = "output" },
+        { direction = defines.direction.east, position = {0, -0.5}, flow_direction = "output" },
+        { direction = defines.direction.east, position = {0, 0.5}, flow_direction = "output" },
+        { direction = defines.direction.south, position = {0, 0.5}, flow_direction = "input" },
       },
     }
 	

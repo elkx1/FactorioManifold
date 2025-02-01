@@ -23,8 +23,13 @@ M.copyPrototype = function(type, name, newName)
   return p
 end
 
+-- Funtions for use during prototype stage to determine mod extensions to use
 M.isBobsPumpAvailable = function()
 	return data.raw["pump"]["bob-pump-4"] ~= nil
+end
+
+M.isSpaceAgeModLoaded = function()
+	return mods["space-age"] ~= nil
 end
 
 return M

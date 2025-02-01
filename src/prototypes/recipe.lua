@@ -3,43 +3,29 @@ if lib.isBobsPumpAvailable() then
 	requiredPump = "bob-pump-4"
 end
 
+local basicIngredients = {
+  {type="item", name=requiredPump, amount=4},
+  {type="item", name="concrete", amount=100},
+}
+if lib.isSpaceAgeModLoaded() then
+  basicIngredients[#basicIngredients+1] = {type="item", name="tungsten-plate", amount=15}
+end
+
 data:extend({
   {
     type = "recipe",
     name = "intake-manifold",
     energy_required = 3,
     enabled = false,
-    ingredients =
-    {
-      {requiredPump, 4},
-      {"concrete", 100}
-    },
-    result = "manifold-pump-intake"
+    ingredients = basicIngredients,
+    results = {{type="item", name="manifold-pump-intake", amount=1}}
   },
-  
   {
     type = "recipe",
     name = "outlet-manifold",
     energy_required = 3,
     enabled = false,
-    ingredients =
-    {
-      {"manifold-pump-intake", 1}
-    },
-    result = "manifold-pump-outlet"
-  },
-  
-  {
-    type = "recipe",
-    name = "intake-manifold-from-outlet",
-    energy_required = 3,
-    enabled = false,
-	allow_as_intermediate = false,
-    allow_intermediates = false,
-    ingredients =
-    {
-      {"manifold-pump-outlet", 1}
-    },
-    result = "manifold-pump-intake"
+    ingredients = basicIngredients,
+    results = {{type="item", name="manifold-pump-outlet", amount=1}}
   },
 })
