@@ -1,11 +1,11 @@
 {
   "name": "manifold-pumps",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "title": "Manifold Pumps",
   "author": "mirabelle_",
   "contact": "https://github.com/mirabelle_/FactorioManifold",
   "homepage": "https://mods.factorio.com/mod/manifold-pumps",
   "description": "Adds pumps with multiple inputs and outputs.",
   "factorio_version": "2.0",
-  "dependencies": ["base >= 2.0.0", "space-age >= 2.0.0", "? boblogistics >= 0.17.1"]	
+  "dependencies": ["base >= 2.0.0", "? space-age >= 2.0.0", "? boblogistics >= 0.17.1"]	
 }

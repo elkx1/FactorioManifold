@@ -19,3 +19,6 @@
 - Require tungsten plate when Space Age is enabled.
 - Remove conversion recipe between manifold directions. There are now just 2 recipes.
 - Increase energy consumption.
+
+## Version 0.0.7
+- Fix that space-age was listed as required dependency when it's actually optional.
